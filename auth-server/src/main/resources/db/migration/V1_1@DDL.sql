@@ -1,0 +1,1 @@
+ALTER table oauth_client_details MODIFY autoapprove VARCHAR(255);

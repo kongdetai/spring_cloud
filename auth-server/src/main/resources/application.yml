@@ -1,0 +1,38 @@
+server:
+  port: 9000
+
+spring:
+  freemarker:
+    cache: true
+    charset: "UTF-8"
+    content-type: "text/html"
+    enabled: true
+    suffix: ".html"
+    template-loader-path: "classpath:/templates/"
+    request-context-attribute: "request"
+    expose-request-attributes: true
+    expose-spring-macro-helpers: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.4.28:5432/pacsdb
+    username: pacs
+    password: pacs
+
+#security:
+##  sessions: "stateless"
+#  basic:
+#    enabled: false
+#  enable-csrf: false
+#endpoints:
+#  health:
+#    sensitive: false
+#management:
+#  security:
+#    enabled: false
+api:
+  gateway:
+    url: "http://gateway-server:10000/api"
+
+#flyway:
+#  enabled: true
+#  sql-migration-separator: "@"
